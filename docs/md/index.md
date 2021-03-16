@@ -78,7 +78,8 @@ The webpage is to be developed in _markdown_ ([CommonMark](https://spec.commonma
    *Note:* to also [run the p5.js sketches locally](https://codedoc.cc/docs/config/output#build-files-on-git) link `dist/docs/sketches` to the `sketches` folder.
    ```shell
    cd dist/docs/
-   ln -s ../../docs/sketches
+   ln -s ../../docs/sketches  # --> in Linux
+   rm -r ./sketches && ln -s ../../docs/sketches # --> in Windows, with GNUtils    
    ```
 6. Deploy to github:
    ```shell

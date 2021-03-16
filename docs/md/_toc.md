@@ -21,3 +21,8 @@
 > :Collapse label=Members
 > 
 > [NN](/docs/members/nn)
+> [Miguel Alejandro Peña Hurtado](/docs/members/miguel-penia)
+
+> :Collapse label = Tests
+>
+> [Image test](/docs/snippets/image)
