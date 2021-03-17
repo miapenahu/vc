@@ -26,3 +26,4 @@
 > :Collapse label = Tests
 >
 > [Image test](/docs/snippets/image)
+> [Multiple Canvas](/docs/snippets/multiple)
