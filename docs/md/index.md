@@ -80,8 +80,11 @@ The webpage is to be developed in _markdown_ ([CommonMark](https://spec.commonma
    cd dist/docs/
    # --> in Linux
    ln -s ../../docs/sketches
-   # --> in Windows, with GNUtils    
+   # --> in Windows, with GNUtils
+      # --> First time    
    cd dist/docs/ && rm -r ./sketches && ln -s ../../docs/sketches 
+      # --> Next times
+      rm -r ./sketches && ln -s ../../docs/sketches
    ```
 6. Deploy to github:
    ```shell

@@ -1,40 +1,48 @@
+let pg;
 let img;
 
 function setup() {
-  // create an image using the p5 dom library
-  // call modelReady() when it is loaded
-  
-  //img = loadImage("/vc/docs/sketches/lenna.png");
-  //createCanvas(512, 512);
-  // set the image size to the size of the canvas
-  size(800,600)
-  pg = createGraphics(400, 300)
-  frameRate(1); // set the frameRate to 1 since we don't need it to be running quickly in this case
+  createCanvas(512, 512);
+  pg = createGraphics(100, 100);
+  img = loadImage("/vc/docs/sketches/lenna.png");
+  frameRate(1); 
 }
 
 function draw() {
-  background(0)
-  strokeWeight(3)
-  pg.beginDraw()
-  pg.background(125);
-  pg.fill(0,255,0)
-  pg.ellipse(156,256,55,155)
-  pg.endDraw()
+  background(255);
+  pg.background(100);
+  pg.noStroke();
+  pg.ellipse(pg.width / 2, pg.height / 2, 50, 50);
+  image(pg, 50, 50);
+  image(pg, 0, 0, 50, 50);
+  image(pg, 100, 100);
+  image(img, 0, 0, 256, 256);
+  gray = grayscale(img)
+  neg = negative(img)
+  image(negative(img),0 , 256, 256, 256);
+  image(grayscale(img),256 , 0, 256, 256);
+}
 
-  image(pg, 100, 200)
+function negative(imag){
+  let copied = createGraphics(imag.width,imag.height);
+  copied.loadPixels();  
+  for(let i = 0; i < imag.width; i++) {
+    for(let j = 0; j < imag.height; j++) {
+      copied.set(i, j, color(255 - red(imag.get(i, j)), 255 - green(imag.get(i, j)), 255 - blue(imag.get(i, j))));
+    }
+  }
+  copied.updatePixels();
+  return copied;
+}
 
-//   fill(255,0,0)
-//   stroke(255,0,255)
-//   ellipse(mouseX,mouseY, 155,55)
-  //loadPixels();
-
-  //for(let i = 0; i < width; i++) {
-  //  for(let j = 0; j < height; j++) {
-  //    set(i, j, color(255 - red(get(i, j)), 255 - green(get(i, j)), 255 - blue(get(i, j))));
-  //  }
-  //}
-
-  //updatePixels();
-
-  //noLoop();
+function grayscale(imag){
+  let copied = createGraphics(imag.width,imag.height);
+  copied.loadPixels();  
+  for(let i = 0; i < imag.width; i++) {
+    for(let j = 0; j < imag.height; j++) {
+      copied.set(i, j, color((red(imag.get(i, j)) +  green(imag.get(i, j)) + blue(imag.get(i, j)))/3));
+    }
+  }
+  copied.updatePixels();
+  return copied;
 }

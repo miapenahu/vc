@@ -20,10 +20,10 @@
 
 > :Collapse label=Members
 > 
-> [NN](/docs/members/nn)
+<!--  [NN](/docs/members/nn) -->
 > [Miguel Alejandro Peña Hurtado](/docs/members/miguel-penia)
 
 > :Collapse label = Tests
 >
-> [Image test](/docs/snippets/image)
-> [Multiple Canvas](/docs/snippets/multiple)
+>[Image test](/docs/snippets/image) 
+> [Multiple Images](/docs/snippets/multiple)

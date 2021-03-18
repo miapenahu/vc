@@ -1,6 +1,6 @@
-# Community libraries
+# Multiple Images
 
-Took from the [ml5](https://ml5js.org/) example [here](https://learn.ml5js.org/#/reference/facemesh?id=examples). Also shows how to load an image.
+This would be one possible way to display several images in one Canvas.
 
 > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/multiple.js, width=512, height=512
 
