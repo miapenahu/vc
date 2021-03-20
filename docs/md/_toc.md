@@ -27,3 +27,6 @@
 >
 >[Image test](/docs/snippets/image) 
 > [Multiple Images](/docs/snippets/multiple)
+> [Grayscale algorithms](/docs/snippets/grayscale)
+> [Blur matrices]()
+> [ASCII art](/docs/snippets/ascii)
