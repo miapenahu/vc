@@ -1,14 +1,13 @@
 let pg;
 let img;
 
+function preload(){
+  img = loadImage("/vc/docs/sketches/lenna.png");
+}
+
 function setup() {
   createCanvas(512, 512);
   pg = createGraphics(100, 100);
-  img = loadImage("/vc/docs/sketches/lenna.png");
-  frameRate(1); 
-}
-
-function draw() {
   background(255);
   pg.background(100);
   pg.noStroke();
@@ -21,6 +20,11 @@ function draw() {
   neg = negative(img)
   image(negative(img),0 , 256, 256, 256);
   image(grayscale(img),256 , 0, 256, 256);
+  //frameRate(1); 
+}
+
+function draw() {
+
 }
 
 function negative(imag){
@@ -45,4 +49,12 @@ function grayscale(imag){
   }
   copied.updatePixels();
   return copied;
+}
+
+function mousePressed() {
+  loop();
+}
+
+function mouseReleased() {
+  noLoop();
 }
